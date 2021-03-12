@@ -22,10 +22,140 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     flex-direction: column;
     }
 .container{
-    max-width: 1180px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
 }
 .content{
     flex: 1 1 auto;
+}
+body{
+    font-family: Georgia serif ;
+}
+.index__fon{
+    background: url(../img/fon-index.png)0 0/100% 100% no-repeat;
+}
+.about__fon{
+    background: url(../img/fon-about.png)0 0/100% 100% no-repeat;
+}
+.project__fon{
+    background: url(../img/fon-project.png)0 0/100% 100% no-repeat;
+}
+.prices__fon{
+    background: url(../img/fon-price.png)0 0/100% 100% no-repeat;
+}
+.nav{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.nav__block{
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(255, 255, 255, .34);
+    align-items: center;
+    height: 103px;
+    width: 882px;
+}
+.nav__line{
+    height: 3px;
+    width: 745px;
+    background-color: #000;
+    opacity: 100%;
+}
+.nav__line1{
+    height: 3px;
+    width: 120px;
+    background-color: #000;
+    opacity: 100%;
+}
+.menu{
+    padding: 20px;
+}
+.calculate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(148, 212, 249,.42);
+    height: 103px;
+}
+.munu__link{
+    color: #000;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 24px;
+}
+.logo__img{
+    height: 103px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.text{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.project__block{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.left{
+    text-align: right;
+}
+.center{
+    text-align: center;
+}
+.fs40{
+    font-size: 40px;
+}
+.fs36{
+    font-size: 36px;
+}
+.fs28{
+    font-size: 28px;
+}
+.lh49{
+    line-height: 49px;
+}
+.lh45{
+    line-height: 45px;
+}
+.lh35{
+    line-height: 35px;
+}
+.text h1,h2{
+    padding: 20px 0;
+}
+.pb70{
+    padding-bottom: 70px;
+}
+.project{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.project__img{
+    height:200px;
+    width: 350px;
+    margin: 40px;
+    transition: 0.5s;
+}
+.project__img:hover,
+.project__img:active{
+    transform: scale(1.2);
+}
+.footer{
+    height: 50px;
+    background-color:#e9e9e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer a{
+    color: #000;
+    text-decoration: none;
+    padding-left: 10px;
 }
