@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
             if(response.ok){
                 let result = await response.json();
                 alert(result.message);
-                formData.reset();
+                error=0;
             }else{
                 alert("ошибка");
             }
@@ -50,6 +50,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 }
             }
         }
+        return error;
     }
     function formAddError(input){
         input.parentElement.classList.add("_error");
