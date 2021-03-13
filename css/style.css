@@ -128,10 +128,39 @@ body{
     margin: 0 auto;
     padding-top: 30px;
 }
+.construction__block{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.construction__block h1{
+    padding-bottom: 30px;
+}
+
+.ceiling__block{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.ceiling__block p{
+    padding: 15px 0;
+}
+
 .prices__block{
     max-width: 1300px;
     margin: 0 auto;
     padding-top: 30px;
+}
+.plot__block{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.plot__block h3,h1{
+    padding: 10px 0px;
 }
 .design__block{
     max-width: 1300px;
@@ -192,6 +221,21 @@ body{
 .project__img:active{
     transform: scale(1.2);
 }
+.ceiling__items{
+    display: flex;
+    justify-content: center;
+
+}
+.ceiling__item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.ceiling__item p{
+    font-size: 28px;
+    padding:0px 20px;
+}
+
 .table{
     font-size: 30px;
     margin: 50px 0px;
@@ -229,7 +273,9 @@ width: 350px;
     transform: scale(1.1);
 }
 
-
+.table__design td{
+    vertical-align: top;
+}
 
 
 /* Форма отправки */
@@ -322,13 +368,29 @@ textarea {
 
 
 
+.construction__items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.construction__item{
+    width: 50%;
+    font-size: 28px;
+    padding: 10px;
+}
+.plot__items{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
 
-
-
-
-
-
+.plot__item{
+    width: 50%;
+    font-size: 28px;
+    padding: 10px;
+}
 
 
 
