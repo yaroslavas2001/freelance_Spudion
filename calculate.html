@@ -5,34 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Spudion</title>
+    <title>Spudion рассчёт</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="content">
-
-            <div class="index__fon">
+        <div class="content calculate__fon">
+            <div class="container ">
                 <nav class="nav">
 
                     <div class="logo">
-                        <img src="img/Eb_Bi-4BRnI.jpg" alt="">
+                        <a href="index.html">
+                        <img src="img/Frame.png" alt="" class="logo__img"></a>
                     </div>
-                    <div class="menu">
-                        <a href="#!" class="munu__link">Главная</a>
+                    <div class="nav__block">
+                         <div class="menu">
+                        <a href="index.html" class="munu__link">Главная</a>
                         <a href="about.html" class="munu__link">О компании</a>
                         <a href="project.html" class="munu__link">Проекты</a>
                         <a href="prices.html" class="munu__link">Цены</a>
                         <a href="services.html" class="munu__link">Услуги</a>
                         <a href="contacts.html" class="munu__link">Контакты</a>
-                        <a href="calculate.html" class="munu__link">Рассчитать</a>
+                        
                     </div>
+                    <div class="nav__line"></div>
+                    </div>
+                   <div class="calculate">
+                       <a href="#!" class="munu__link">Рассчитать</a>
+                       <div class="nav__line1"></div>
+                   </div>
                 </nav>
+                <div class="services__block">
+                    <form action="#" id="form" class="form__body">
+                        <h1 class="form__title">Отправка данных на почту</h1>
+                        <div class="form__item">
+                            <lable for="formName" class="form__lable">Имя*:</lable>
+                            <input id="formName" name="name" type="text" class="form__input _req">
+                        </div>
+                        <div class="form__item">
+                            <lable for="formEmail" class="form__lable">Email*:</lable>
+                            <input id="formEmail" name="email" type="text" class="form__input _req _email">
+                        </div>
+                        <div class="form__item">
+                            <div class="form__lable">левша или правша?</div>
+                            <div class="options">
+                                <div class="options__item">
+                                    <input id="rightHand"  type="radio" checked value="right" name="hand" class="options__input" >
+                                    <label for="rightHand" class="options__lable"><span>Правша</span></label>
+                                </div>
+                            </div>
+                            <div class="options">
+                                <div class="options__item">
+                                    <input id="leftHand"  type="radio" value="left" name="hand" class="options__input" >
+                                    <label for="leftHand" class="options__lable"><span>Левша</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <lable for="formMessage" class="form__lable">Сообщение:</lable>
+                            <textarea name="message" id="formMessage" ></textarea>
+                        </div>
+                        
+                        <div class="form__item">
+                            <div class="form__lable">Возвраст:</div>
+                            <select name="age" class="select">
+                                <option value="от 18 до 25" selected>Супер молодой</option>
+                                <option value="от 25 до 45">Молодой</option>
+                                <option value="от 45">Не такой молодой</option>
+                            </select>
+                        </div>      
+                        <div class="form__item">
+                            <div class="form__lable">Прикрепить фото проекта</div>
+                            <div class="file">
+                                <div class="file__item">
+                                    
+                                    <input type="file" id="formImage" name="image" class="file__input" accept=".jpg, .png, .gif">
+                                    <div class="file__button">Выбрать</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__item">
+                            <input type="checkbox" id="formAgreement" checked name="agreement" class="checkbox__input _req">
+                            <label for="formAgreement" class="checkbox__lable">Я даю свое согласие на обработку персональных данных в соответствии с Условием*</label>
+                        </div>
+                        <button type="submit" class="form__button">Отправить</button>
+                    </form>
+                </div>
+
             </div>
         </div>
         <footer class="footer">
-            <p>calculz</p>
+            <img src="img/vkk.svg" alt="">
+            <a href="https://vk.com/roflwithme">Иван Романский</a>
         </footer>
     </div>
+    
     <script src="js/script.js"></script>
 </body>
 </html>

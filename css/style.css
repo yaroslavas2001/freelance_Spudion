@@ -30,7 +30,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
     flex: 1 1 auto;
 }
 body{
-    font-family: Georgia serif ;
+    font-family:Georgia serif;
 }
 .index__fon{
     background: url(../img/fon-index.png)0 0/100% 100% no-repeat;
@@ -43,6 +43,30 @@ body{
 }
 .prices__fon{
     background: url(../img/fon-price.png)0 0/100% 100% no-repeat;
+}
+.services__fon{
+    background: url(../img/fon-services.png)0 0/100% 100% no-repeat;
+}
+.kont__fon{
+    background: url(../img/fon-kont.png)0 0/100% 100% no-repeat;
+}
+.calculate__fon{
+    background: url(../img/fon-calkulete.png)0 0/100% 100% no-repeat;
+}
+.ceiling__fon{
+    background: url(../img/fon-celling.png)0 0/100% 100% no-repeat;
+}
+.architecture__fon{
+    background: url(../img/fon-arxitectura.png)0 0/100% 100% no-repeat;
+}
+.construction__fon{
+    background: url(../img/fon-build.png)0 0/100% 100% no-repeat;
+}
+.design__fon{
+    background: url(../img/fon-dezign.png)0 0/100% 100% no-repeat;
+}
+.plot__fon{
+    background: url(../img/fon-plot.png)0 0/100% 100% no-repeat;
 }
 .nav{
     display: flex;
@@ -59,6 +83,7 @@ body{
     height: 103px;
     width: 882px;
 }
+
 .nav__line{
     height: 3px;
     width: 745px;
@@ -71,6 +96,7 @@ body{
     background-color: #000;
     opacity: 100%;
 }
+
 .menu{
     padding: 20px;
 }
@@ -101,6 +127,25 @@ body{
     max-width: 1400px;
     margin: 0 auto;
     padding-top: 30px;
+}
+.prices__block{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.design__block{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 30px;  
+}
+.contacts__block{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+.contacts__block a{
+    color: #000;
 }
 .left{
     text-align: right;
@@ -147,15 +192,176 @@ body{
 .project__img:active{
     transform: scale(1.2);
 }
-.footer{
+.table{
+    font-size: 30px;
+    margin: 50px 0px;
+}
+.table th,td{
+    padding: 5px;
+}
+.services__block{
+    display: flex;
+    flex-direction: column;
+}
+.services__row{
+    display: flex;
+    justify-content: center;
+}
+.services__item a{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+}
+.services__item p{
+    color: #000;
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 60px;
+    
+}
+.services__item img{
+transition: 0.5s;
+width: 350px;
+}
+.services__item img:active,
+.services__item img:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+/* Форма отправки */
+
+.form{
+    max-width: 550px;
+    margin: 0 auto;
+    color: #fff;
+    padding: 30px 0;
+}
+.form__body{
+
+}
+.form__title{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px 0px 30px 0px;
+}
+.form__item{
+    margin: 0px 0px 20px 0px;
+}
+.form__lable{
+    font-size: 18px;
+    display: block;
+    margin: 0px 0px 10px 0px;
+}
+.form__input{
     height: 50px;
+    padding: 0px 20px;
+    border-radius: 5px;
+    width: 400px;
+    font-size: 18px;
+}
+.form__input._error{
+    box-shadow: 0 0 15px red;
+}
+textarea {
+    min-height: 100px;
+    min-width: 400px;
+    resize: vertical;
+    padding: 20px;
+    border-radius: 5px;
+}
+.options{
+    margin: 10px 0px 0px 0px;
+}
+.options__item{
+    margin: 0px 0px 10px 0px;
+}
+.options__input{
+    display: none;
+}
+.options__input:checked + .options__lable::after{
+    transform: scale(1);
+}
+.options__lable{
+    display: inline-flex;
+    font-size: 16px;
+    line-height: 14px;
+    align-items: center;
+    position: relative;
+}
+.options__lable::before{
+    content: "";
+    align-self: flex-start;
+    flex: 0 0 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0px 10px 0px 0px;
+}
+.options__lable::after{
+    transition: transform 0.4s ease 0s;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #000;
+    border-radius: 50%;
+    transform: scale(0);
+}
+
+
+
+.select{
+    height: 50px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.design__item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 70px;
+}
+.design__img{
+    width: 33%;
+    margin: 0 10px;
+}
+.table__design{
+    font-size: 24px;
+}
+.table__design td{
+    width: 33%;
+}
+.footer{
+    height: 60px;
     background-color:#e9e9e9;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.footer img{
+    width: 40px;
+}
 .footer a{
     color: #000;
     text-decoration: none;
     padding-left: 10px;
+    font-size: 34px;
 }
