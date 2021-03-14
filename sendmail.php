@@ -1,42 +1,26 @@
 <?php
-    use PHPMailer\PHPMailer\Exception;
-    use PHPMailer\PHPMailer\PHPMailer;
+$name = trim($_POST['name']);
+$email = trim($_POST['email']);
+$phone = trim($_POST['phone']);
+$message = trim($_POST['message']);
 
-    require "phpmailer/src/Exception.php";
-    require "phpmailer/src/PHPMailer.php";
+// указываем адрес отправителя, можно указать адрес на домене Вашего сайта
+$fromMail = 'yaroslavas2001@list.ru';
+$fromName = 'yousite.ru Форма';
 
-    $mail = new PHPMailer(true);
-    $mail -> CharSet = "UTF-8";
-    $mail -> setLanguage("ru","phpmailer/language");
-    $mail -> IsHTML(true);
+// Сюда введите Ваш email
+$emailTo = 'endurancei@mail.ru';
+$subject = 'Форма обратной связи на php';
+$subject = '=?utf-8?b?'. base64_encode($subject) .'?=';
+$headers = "Content-type: text/plain; charset=\"utf-8\"\r\n";
+$headers .= "From: ". $fromName ." <". $fromMail ."> \r\n";
 
-    //от кого письмо
-    $mail -> setFrom("endurancei@mail.ru","Ваня");
-    //Кому письмо
-    $mail -> addAddress("endurancei@mail.ru");
-    //тема письма
-    $mail -> Subject = "Это отправка формы";
+// тело письма
+$body = "Получено письмо с сайта testsite.ru \n Имя: $name\nТелефон: $phone \n E-mail: $email\nСообщение: $message";
 
-    $body = "<h1>Форма</h1>";
-
-if(trim(!empty($_POST['name']))){
-    $body.="<p>Имя".$_POST['name']."</p>";
-}
-if(trim(!empty($_POST['email']))){
-    $body.="<p>Email".$_POST['email']."</p>";
-};
-
-$mail ->Body =$body;
-
-//отпраляем
-if(!$mail->send()){
-    $massage="ошибка";
-} else {
-    $massage="все ок";
+// сообщение будет отправлено в случае, если поле с номером телефона не пустое
+if (strlen($phone) > 0) {
+    $mail = mail($emailTo, $subject, $body, $headers, '-f'. $fromMail );
 }
 
-$response =["message"=>$massage];
-
-header("Content-type: application/json");
-echo json_encode($response);
 ?>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/calculate.css">
     <title>Spudion рассчёт</title>
 </head>
 <body>
@@ -37,32 +37,26 @@
                 <div class="services__block">
                     <h1 class="center fs40 lh45"><b>Расчёт</b></h1>
                     <p class="fs28"> Нашим клиентам предлагается заполнение формы заявки для расчёта стоимости строительства, так как сама по себе модель калькулятора расчета стоимости является крайне вариативной, что привело нас к решению отказаться от онлайн расчётов.</p>
-                    <form action="#" id="form" class="form__body">
-                        <!-- <h1 class="form__title">Отправка данных на почту</h1> -->
-                        <div class="form__item">
-                            <lable for="formName" class="form__lable">Имя*:</lable>
-                            <input id="formName" name="name" type="text" class="form__input _req">
-                        </div>
-                        <div class="form__item">
-                            <lable for="formEmail" class="form__lable">Email*:</lable>
-                            <input id="formEmail" name="email" type="text" class="form__input _req _email">
-                        </div>
-                        
-                        <div class="form__item">
-                            <lable for="formMessage" class="form__lable">Сообщение:</lable>
-                            <textarea name="message" id="formMessage" ></textarea>
-                        </div>
-                        
-                        <div class="form__item">
-                            <div class="form__lable">Особенность рельефа:</div>
-                            <select name="age" class="select">
-                                <option value="Горы" selected>Горы</option>
-                                <option value="Котловина">Котловина</option>
-                                <option value="Хребет">Хребет</option>
-                            </select>
-                        </div>      
-                        
-                        <button type="submit" class="form__button">Отправить</button>
+                    <form action="sendmail.php" method="post">
+                        <!--Тег используется для группировки связанных элементов в форме-->
+                        <fieldset>
+                            <!--Тег задает заголовок для групповых элементов-->
+                            <legend>Оставьте сообщение:</legend>
+                            Ваше имя:
+                            <!--Устанавливает однострочное текстовое поле ввода:-->
+                            <input type="text" name="name">
+                            <!--Используется для полей ввода, которые должны содержать адрес электронной почты.-->
+                            E-mail:
+                            <input type="text" name="email">
+                            Номер телефона:
+                            <input type="text" name="phone">
+                            Сообщение:
+                            <!--Тег разрешает многострочный ввод текста.-->
+                            Текстовая область может содержать неограниченное количество символов-->
+                            <textarea rows="10" cols="45" name="message"></textarea>
+                            <!--Устанавливает кнопку для отправки данных формы в обработчик формы.-->
+                            <input type="submit" value="Отправить сообщение">
+                        </fieldset>
                     </form>
                 </div>
 
